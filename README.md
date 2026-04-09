@@ -1,5 +1,6 @@
 # Qt FFmpeg 视频播放器
 基于 Qt 和 FFmpeg 开发的跨平台桌面视频播放器，支持常见音视频格式解码播放。
+![主界面](./demo/screenshot/main_interface.png)
 
 ## 功能特性
 - 支持常见视频文件播放（MP4、MOV、MKV 等）
