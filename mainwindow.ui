@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>389</width>
+    <height>241</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FFE6F2, stop: 1 #FFB6C1);
+QMainWindow {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #FFE6F2, stop: 1 #FFB6C1);
+    border: none;
+}
+
+QWidget {
+    background-color: transparent;  /* 子控件透明，显示主窗口的渐变 */
+    color: #222222;                 /* 黑色文字，清晰不刺眼 */
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,5">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="selectFolderBtn">
+        <property name="text">
+         <string>selectFolder</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="folderPathLabel">
+        <property name="text">
+         <string>folderPath</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,2">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QListWidget" name="videoListWidget">
+        <property name="styleSheet">
+         <string notr="true">QListWidget::item:selected {
+    background-color: #e88fb0;
+    border-radius: 8px;
+    color: #000000;
+    margin: 2px 4px;
+}
+
+QListWidget::item:selected:!active {
+    background-color: #e88fb0;
+    border-radius: 8px;
+    color: #000000;
+    margin: 2px 4px;
+}
+QListWidget::item:hover {
+    background-color: #f0d0d8;
+}</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="videoLabel">
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+    background-color: #000000;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,0,0,0,0,1,0">
+      <item>
+       <widget class="QPushButton" name="prevBtn">
+        <property name="text">
+         <string>prev</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="playBtn">
+        <property name="minimumSize">
+         <size>
+          <width>56</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>play</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextBtn">
+        <property name="text">
+         <string>next</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopBtn">
+        <property name="text">
+         <string>stop</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="volumeBtn">
+        <property name="text">
+         <string>volume</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="volumeSlider">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+border: none; </string>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="volumeLabel">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+border: none; </string>
+        </property>
+        <property name="text">
+         <string>0%</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="10,0">
+      <item>
+       <widget class="QSlider" name="progressSlider">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+border: none; </string>
+        </property>
+        <property name="maximum">
+         <number>100</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="timeLabel">
+        <property name="styleSheet">
+         <string notr="true">background: transparent;
+border: none; </string>
+        </property>
+        <property name="text">
+         <string>00:00:00/00:00:00</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>389</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
